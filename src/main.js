@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import ElementUI from 'element-ui'
+Vue.use(ElementUI)
+
 import fetcher from './assets/js/fetcher'
 fetcher()
 
