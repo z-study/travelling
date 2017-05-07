@@ -28,6 +28,16 @@
           <el-button size="large" class="submit" type="primary" @click="submit('userForm')">立即注册</el-button>
         </el-form-item>
       </el-form>
+      <div class="other-way">
+        <div>
+          <i class="i-company"></i>
+          <span>企业用户注册</span>
+        </div>
+        <div>
+          <i class="i-internet"></i>
+          <span>INTERNATIONAL<br>CUSTOMERS</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -90,12 +100,15 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .register {
     width: 830px;
+    height: 360px;
     margin: 50px auto 60px;
+    overflow: hidden;
   }
   .register-form {
+    float: left;
     width: 400px;
   }
   .el-form-item {
@@ -111,5 +124,36 @@
   }
   .submit {
     width: 100%;
+  }
+  .other-way {
+    float: right;
+    width: 280px;
+    height: 90%;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 90px;
+    border-left: solid 1px #e6e6e6;
+    div {
+      width: 165px;
+      height: 60px;
+      border-bottom: solid 1px #ddd;
+      &:last-child {
+        border: 0;
+        padding-top: 20px;
+      }
+    }
+    span {
+      display: inline-block;
+      padding-left: 20px;
+      vertical-align: middle;
+    }
+  }
+  .i-company, .i-internet {
+    color: #8dc54a;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+  .i-internet {
+    color: #20a0ff;
   }
 </style>

@@ -10,8 +10,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 @import url(./assets/css/reset.css);
+@import url(./assets/css/icon.less);
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
