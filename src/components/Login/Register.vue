@@ -39,11 +39,13 @@
         </div>
       </div>
     </div>
+    <FootBar></FootBar>
   </div>
 </template>
 
 <script>
   import HeadBar from './HeadBar'
+  import FootBar from '../basic/FootBar'
 
   export default {
     data () {
@@ -95,7 +97,8 @@
       }
     },
     components: {
-      HeadBar
+      HeadBar,
+      FootBar
     }
   }
 </script>

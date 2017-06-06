@@ -1,5 +1,6 @@
 <template>
   <el-form :model="userForm" :rules="rules" ref="userForm" class="demo-ruleForm login-form">
+    <Company></Company>
     <el-form-item prop="user">
       <el-input size="large" type="tel" v-model="userForm.user" placeholder="手机号"></el-input>
     </el-form-item>
@@ -13,6 +14,8 @@
 </template>
 
 <script>
+  import Company from '../Company/Company'
+
   export default {
     data () {
       // let checkPass = (rule, value, callback) => {
@@ -55,6 +58,9 @@
           }
         })
       }
+    },
+    components: {
+      Company
     }
   }
 </script>
