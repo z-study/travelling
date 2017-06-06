@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <Navigation></Navigation>
     <pagination :cur="curPage" :all="allPage" v-on:change-page="changePage"></pagination>
     <ul class="list">
       <li v-for="(item, index) in items">item -- {{ index }}</li>
@@ -9,8 +10,9 @@
 </template>
 
 <script>
-import pagination from './basic/vue-nav'
-import scroll from './basic/vue-scroll'
+import pagination from './Basic/vue-nav'
+import scroll from './Basic/vue-scroll'
+import Navigation from './Basic/Navigation'
 
 export default {
   name: 'hello',
@@ -37,7 +39,8 @@ export default {
   },
   components: {
     scroll,
-    pagination
+    pagination,
+    Navigation
   }
 }
 </script>
