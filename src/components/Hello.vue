@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
     <Navigation></Navigation>
-    <pagination :cur="curPage" :all="allPage" v-on:change-page="changePage"></pagination>
+    <!-- <pagination :cur="curPage" :all="allPage" v-on:change-page="changePage"></pagination>
     <ul class="list">
       <li v-for="(item, index) in items">item -- {{ index }}</li>
-    </ul>
+    </ul> -->
     <!-- <scroll :show="canLoad" v-on:loading="getMore"></scroll> -->
   </div>
 </template>
