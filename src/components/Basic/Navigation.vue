@@ -2,12 +2,14 @@
   <header>
     <div class="main">
       <img src="../../assets/images/logo.png" alt="logo">
-      <el-menu class="menus" mode="horizontal" @select="handleSelect">
-        <el-submenu index="0">
-          <template slot="title">{{title}}</template>
-          <el-menu-item v-for="(tab, index) in tabList" :key="index" :index="''+index">{{tab}}</el-menu-item>
-        </el-submenu>
-      </el-menu>
+      <div class="title-menu">
+        <el-menu class="menus" mode="horizontal" @select="handleSelect">
+          <el-submenu index="0">
+            <template slot="title">{{title}}</template>
+            <el-menu-item v-for="(tab, index) in tabList" :key="index" :index="''+index">{{tab}}</el-menu-item>
+          </el-submenu>
+        </el-menu>
+      </div>
       <div class="top-right">
         <el-input
           class="top-search"
@@ -58,10 +60,6 @@
       vertical-align: middle;
     }
   }
-  .menus {
-    display: inline-block;
-    vertical-align: middle;
-  }
   .top-right {
     float: right;
     font-size: 14px;
@@ -75,5 +73,53 @@
   }
   .top-search {
     width: 200px;
+  }
+  .title-menu {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+  }
+</style>
+<style lang="less">
+  .title-menu {
+    .el-menu {
+      display: inline-block;
+      width: 100%;
+      border-radius: 0px;
+      vertical-align: middle;
+      background-color: #0eb53a;
+    }
+    .el-menu-item, .el-submenu__title {
+      color: #e4d010;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .el-menu--horizontal .el-submenu__title:hover {
+      background-color: #0eb53a;
+    }
+    .el-menu--horizontal>.el-submenu:hover .el-submenu__title {
+      border-bottom: 0;
+    }
+    .el-menu--horizontal .el-submenu .el-submenu__icon-arrow {
+      color: #e4d010;
+    }
+    .el-menu--horizontal .el-submenu {
+      float: none;
+    }
+    .el-menu--horizontal .el-submenu .el-submenu__title {
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 0;
+    }
+    .el-menu-item.is-active {
+      color: #e4d010;
+    }
+    .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+      border-bottom: 0;
+    }
+    .el-menu--horizontal .el-submenu>.el-menu {
+      top: 55px;
+    }
+
   }
 </style>
