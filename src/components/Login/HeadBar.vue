@@ -19,6 +19,8 @@
   .header {
     width: 1210px;
     margin: 0 auto;
+    
+
     padding-top: 24px;
     img {
       width: 160px;

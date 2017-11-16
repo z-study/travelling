@@ -42,11 +42,9 @@
     <FootBar></FootBar>
   </div>
 </template>
-
 <script>
   import HeadBar from './HeadBar'
   import FootBar from '../basic/FootBar'
-
   export default {
     data () {
       return {
